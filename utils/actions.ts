@@ -31,9 +31,9 @@ export const createProfileAction = async (
   prevState: any,
   formData: FormData
 ) => {
-  const user = await currentUser();
-  if (!user) throw new Error("Please login to create profile ");
   try {
+    const user = await currentUser();
+    if (!user) throw new Error("Please login to create profile ");
     const rawData = Object.fromEntries(formData);
     // const validatedFields = profileSchema.parse(rawData);
     const validatedFields = validateWithZodSchema(profileSchema, rawData);
