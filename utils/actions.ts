@@ -43,9 +43,9 @@ export const createProfileAction = async (
         clerkId: user.id,
         email: user.emailAddresses[0].emailAddress,
         profileImage: user.imageUrl ?? "",
-        firstName: firstName,
-        lastName: lastName,
-        username: username,
+        firstName: validatedFields.firstName,
+        lastName: validatedFields.lastName,
+        username: validatedFields.username,
       },
     });
     await clerkClient.users.updateUserMetadata(user.id, {
