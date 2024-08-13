@@ -2,8 +2,8 @@ import { createClient } from "@supabase/supabase-js";
 const bucket = "tours";
 // set up supabase instance. it looking for 2 things URL and KEY. first url then key
 // console.log(bucket);
-const url = process.env.SUPABASE_URL as string;
-const key = process.env.SUPABASE_KEY as string;
+const url = process.env.NEXT_PUBLIC_SUPABASE_URL as string;
+const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY as string;
 // console.log(url, 'and the key',  key);
 const supabase = createClient(url, key);
 //loking for image
