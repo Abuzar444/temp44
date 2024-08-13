@@ -92,8 +92,8 @@ export const updataProfileAction = async (
   prevState: any,
   formData: FormData
 ): Promise<{ message: string }> => {
-  const user = await getAuthUser();
   try {
+    const user = await getAuthUser();
     const rawData = Object.fromEntries(formData);
     const validatedFields = validateWithZodSchema(profileSchema, rawData);
     await db.profile.update({
