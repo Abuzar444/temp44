@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-       
+
         remotePatterns: [
             {
                 protocol: 'https',
@@ -9,10 +9,10 @@ const nextConfig = {
             },
             {
                 protocol: 'https',
-                hostname: 'huavskavpzsnjwikxshy.supabase.co',
+                hostname: "wpuwdfgketkcwixrjcio.supabase.co",
             },
         ],
-    
+
     },
 };
 
